@@ -15,8 +15,9 @@ weatherForm.addEventListener('submit',(e)=>{
             if(data.error){
                 msg1.textContent=data.error
             }else{
+                // console.log(data)
                 msg1.textContent=data.location
-                msg2.textContent='The current weather is '+data.forecast.weather+', Temperature is '+data.forecast.temperature+ ' degrees, feels like '+ data.forecast.feelslike
+                msg2.textContent='The current weather is '+data.forecast.weather+', Temperature is '+data.forecast.temperature+ ' degrees, feels like '+ data.forecast.feelslike + '. The humidity is '+ data.forecast.humidity +' %.'
             }
     
         })
