@@ -16,11 +16,11 @@ weatherForm.addEventListener('submit',(e)=>{
                 msg1.textContent=data.error
             }else{
                 msg1.textContent=data.location
-                msg2.textContent=data.forecast.temperature
+                msg2.textContent='The current weather is '+data.forecast.weather+', Temperature is '+data.forecast.temperature+ ' degrees, feels like '+ data.forecast.feelslike
             }
     
         })
     })
 
-
+ 
 })
