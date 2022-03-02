@@ -10,6 +10,7 @@ const forecast = require('./utils/forecast')
 // console.log(path.join(__dirname, '../public')) //current file path
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -106,6 +107,6 @@ app.get('*',(req, res)=>{ //match anything else that hasn't matched  yet
     })
 })
 
-app.listen(3000, ()=>{  // port number 3000
-    console.log('Server is uo on port 3000')
+app.listen(port, ()=>{  // port number 3000
+    console.log('Server is uo on port '+ port)
 }) 
